@@ -11,6 +11,7 @@ void main() {
   ]);
   runApp(
     GetMaterialApp(
+
       debugShowCheckedModeBanner: false,
       routes: {
         '/':(context) => ButtonScreen(),
