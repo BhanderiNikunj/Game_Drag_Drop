@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class HomeControllor extends GetxController{
+class EasyControllor extends GetxController{
   RxBool isChack1 = false.obs;
   RxBool isChack2 = false.obs;
   RxBool isChack3 = false.obs;
