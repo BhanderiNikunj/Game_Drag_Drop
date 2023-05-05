@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:game_drag_drop/Screen/Easy/Controllor/EasyControllor.dart';
+import 'package:game_drag_drop/Screen/EasyMode/Easy/Controllor/EasyControllor.dart';
 import 'package:get/get.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -51,36 +51,29 @@ class _EasyScreenState extends State<EasyScreen>
                         animationDuration: 8000,
                         percent: 1,
                         onAnimationEnd: () {
-
                           if (homeControllor.isChack1 == true &&
                               homeControllor.isChack2 == true &&
                               homeControllor.isChack3 == true &&
                               homeControllor.isChack4 == true) {
-                            // Get.defaultDialog(
-                            //   title: "Game Over",
-                            //   confirm: ElevatedButton(
-                            //     onPressed: () {
-                            //       print("------------------------------------------------------------------");
-                            //       Navigator.pop(context);
-                            //     },
-                            //     child: Text(
-                            //       "Next",
-                            //     ),
-                            //   ),
-                            // );
                             Get.defaultDialog(
                               title: "Hello",
                               confirm: ElevatedButton(
-                                onPressed: () {
-
-                                },
-                                child: Text("Next",),
+                                onPressed: () {},
+                                child: Text(
+                                  "Next",
+                                ),
                               ),
                               cancel: ElevatedButton(
                                 onPressed: () {
-                                  Get.toNamed('easy');
+                                  Get.back();
+                                  homeControllor.isChack1.value = false;
+                                  homeControllor.isChack2.value = false;
+                                  homeControllor.isChack3.value = false;
+                                  homeControllor.isChack4.value = false;
                                 },
-                                child: Text("Restart",),
+                                child: Text(
+                                  "Restart",
+                                ),
                               ),
                             );
                           }
